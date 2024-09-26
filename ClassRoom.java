@@ -1,11 +1,20 @@
 public class ClassRoom
 {
-    private String  roomNr;
-    private boolean computer;
-    private int     size;
-    private boolean beamer;
-    private boolean windows;
+    private String  roomNr;    // consists of building floor and room number
+    private boolean computer;  //are there computers in the room
+    private int     size;      // number of seats
     
+    /*
+     * Constructor
+     * Parameters: Room number, computer, size
+     */
+    public ClassRoom(String newRoomNr, boolean newComputer, int newSize)
+    {
+       setRoomNr(newRoomNr);
+       setComputer(newComputer);
+       setSize(newSize);
+    }
+       
     public void setRoomNr(String newRoomNr)
     {
         roomNr = newRoomNr;
@@ -21,17 +30,7 @@ public class ClassRoom
         size = newSize;
     }
     
-    public void setBeamer(boolean newBeamer)
-    {
-        beamer = newBeamer;
-    }
-    
-    public void setWindows(boolean newWindows)
-    {
-        windows = newWindows;
-    }
-    
-    public String getRoomNr()
+        public String getRoomNr()
     {
         return roomNr;
     }
@@ -46,13 +45,4 @@ public class ClassRoom
         return size;
     }
     
-    public boolean getBeamer()
-    {
-        return beamer;
-    }
-    
-    public boolean getWindows()
-    {
-        return windows;
-    }
 }
